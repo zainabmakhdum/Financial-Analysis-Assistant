@@ -22,3 +22,33 @@ Documentation from the following semiconductor companies were used in this proje
 Financial analysis of semiconductor companies is fragmented across unstructured news articles, subjective op-eds, and dense filings. Analysts struggle to quickly extract relevant information and transform them to impactful insights without manually reading through dense documents.
 
 Therefore, this RAG solution answers company-specific questions by combining financial filings (10k and quarterly reports), curated news, and structured response templates to produce explainable responses to order to enable faster and more reliable analysis.
+
+## Solution Architecture Diagram
+(add once finalized)
+
+## Repository Structure
+
+Financial-Analysis-Assistant/
+│
+├── data/
+│   ├── raw/                                      # Original PDFs and source documents
+│   ├── parsed/                                   # Parsed json files
+│   └── chunks/                                   # FAISS index, chunks, and chunks metadata
+│
+├── src/
+│   ├── ingestion/                                # PDF parsing
+│   ├── chunking/                                 # Chunking logic (Embedding Model + Vector DB)
+│   ├── finetuning-llm/                           # LLM fine-tuning approach
+|   └── app/                                      # end-to-end pipeline + Chat app UI
+|       ├── app.py                                # Chat UI for user interaction
+|       ├── template_embeddings.py                # Build the final prompt (financial chunks + news + selected prompt template)
+|       └── (final llm output file)               # LLM output (after fine-tuning)
+│
+├── docs/
+│   ├── Architecture diagram      
+|   ├── Slide deck
+|   ├── Recorded demo
+│   └── Final report       
+│
+├── README.md
+└── requirements.txt (?) 
