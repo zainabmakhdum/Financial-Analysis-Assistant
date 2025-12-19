@@ -12,7 +12,7 @@ Nazgul - TBD
 Mani - TBD
 Ayon - TBD
 
-![alt text](/images/appimage.png, "App screenshot")`
+![alt text](/images/appimage.png)`
 
 # Requirements and Instructions
 
